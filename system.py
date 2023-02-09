@@ -43,7 +43,7 @@ dataset = {
     
     "test" : torchvision.datasets.ImageFolder(root = train_data_path, transform =data_transforms["test"])
 }
-
+print(torch.cuda.is_available())
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 dataset_loader ={
